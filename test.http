@@ -1,0 +1,25 @@
+GET http://localhost:8080/users
+
+###
+GET http://localhost:8080/cities
+
+###
+POST http://localhost:8080/cities
+Content-Type: application/json
+
+{
+    "code": "hn",
+    "name": "Hà Nội"
+}
+
+###
+POST http://localhost:8080/cities
+Content-Type: application/json
+
+{
+    "code": "hcm",
+    "name": "Hồ Chí Minh"
+}
+
+###
+DELETE  http://localhost:8080/cities/6243d87a6452fe5fb68fa51e
