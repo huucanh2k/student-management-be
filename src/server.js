@@ -1,12 +1,15 @@
 import express from "express"
 import bodyParser from "body-parser"
 import dotenv from "dotenv"
+import cors from "cors"
 dotenv.config()
 // import router from "./routes/routes.js"
 import mongoose from "mongoose"
 import initCityRoute from "./routes/city.js"
-import initUserRoute from "./routes/user.js"
+import initUserRoute from "./routes/student.js"
 const app = express()
+
+app.use(cors())
 
 app.use(bodyParser.json({ limit: "30mb" }))
 app.use(bodyParser.urlencoded({ extended: true, limit: "30mb" }))

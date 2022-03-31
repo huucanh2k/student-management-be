@@ -1,7 +1,7 @@
 GET http://localhost:8080/users
 
 ###
-GET http://localhost:8080/cities
+GET http://localhost:8080/cities/?idCity=624506409e2e44b74d4fddee
 
 ###
 POST http://localhost:8080/cities
@@ -11,14 +11,69 @@ Content-Type: application/json
     "code": "hn",
     "name": "Hà Nội"
 }
-
 ###
 POST http://localhost:8080/cities
 Content-Type: application/json
 
 {
-    "code": "hcm",
-    "name": "Hồ Chí Minh"
+      "code": "pt",
+      "name": "Phan Thiết"
+}
+
+###
+POST http://localhost:8080/cities
+Content-Type: application/json
+
+ {
+      "code": "dn",
+      "name": "Đà Nẵng"
+  }
+
+###
+PUT http://localhost:8080/cities/update/hn
+Content-Type: application/json
+
+{
+    "name": "Hà Nội"
+}
+
+###
+DELETE  http://localhost:8080/cities/6243d87a6452fe5fb68fa51e
+
+
+
+###
+GET http://localhost:8080/students/62455c733350d193507afb3b
+
+###
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "name": "Tran Huu Canh",
+  "age": "22",
+  "mark": "9.9",
+  "gender": "male",
+  "city": "hcm"
+}
+###
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "name": "Bui Thi Xuan Huong",
+  "age": "22",
+  "mark": "8.3",
+  "gender": "female",
+  "city": "hcm"
+}
+
+###
+PUT http://localhost:8080/students/update/624507c65cb1f8bb5f7a6397
+Content-Type: application/json
+
+{
+  "name": "Trần Hữu Cảnh"
 }
 
 ###
